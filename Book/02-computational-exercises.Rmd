@@ -1,0 +1,232 @@
+```{r setup, include=FALSE}
+library(reticulate)
+use_python("/Users/tjb/anaconda3/bin/python")
+```
+
+# Computational Exercises {-}
+
+Software design skills are essential for the practicing data scientist. These exercises are designed to help you develop some basic design skills within the broad context of numerical computing.
+
+You should seek for a proper mix of elegance and efficiency in your programs.
+
+\newpage
+
+## The Chicken Nuggets Problem {-}
+
+\vspace{10mm}
+
+This problem is known as the _chicken nuggets_ problem (or sometimes the _coins_ problem). It goes like this: you walk into Chick Fil-A with an unlimited budget (and appetite!). You can purchase nuggets in boxes of 6, 9, and 20 pieces.
+
+Write a program to tell you the ___highest___ number of nuggets that you ___cannot___ purchase. Re-read that just in case it went past you the first time. The highest number that you cannot get. For example, you can get 15 nuggets by purchasing a box of 6 and a box of 9 nuggets. You can get 18 by purchasing 2 boxes of 9 or 3 boxes of 6. But with no combination of 6, 9, or 20 can you purchase 17 nuggets. What is the highest number that you cannot get?
+
+This simple game will give you experience assembling different bits of `Python` programming to find the solution. The most direct approach and simplest approach will also employ a very simple numerical method called _brute force_ search. 
+
+\vspace{5mm}
+
+Please write your solution starting with the code snippet below. 
+
+\vspace{5mm}
+
+```{python include=TRUE, eval=FALSE}
+def main():
+    # your code goes here!
+    print("Good luck!") # remove this line of code 
+
+if __name__ == "__main__":
+    main()
+```
+
+\newpage
+
+## Guess My Number {-}
+
+\vspace{10mm}
+
+In the book [Python Programming for the Absolute Beginner, 3rd Edition](http://goo.gl/7PGr9r) the author teaches `Python` through some simple game programming. One of the first games that he shows how to write is the so-called *Guess My Number* game, which is the children's game of guessing someone's secret number (a number between 1 and 100). 
+
+First, write a version of the game in which the computer chooses a secret number and the enduser must guess it.
+
+\vspace{5mm}
+
+The output of an implementation of this game might look like this:
+
+\vspace{5mm}
+
+```
+    	Welcome to 'Guess My Number'!
+    	I'm thinking of a number between 1 and 100.
+    	Try to guess it in as few attempts as possible.
+    
+    Take a guess: 50
+    Lower ...
+    Take a guess: 25
+    Lower ...
+    Take a guess: 12
+    Higher...
+    Take a guess: 18
+    Lower ...
+    Take a guess: 15
+    Lower ...
+    Take a guess: 13
+    You guessed it! The number was 13
+    And it only took you 6 tries!
+    
+    
+    Press the enter key to exit.
+```
+
+\vspace{5mm}
+
+
+Now write a version of the game where you and the computer switch roles! That is right: you think of a number and the computer must guess it in as few attempts as possible. You will need to encode your guessing logic to the program solution.
+
+This might seem like silly game play, but in order to solve the problem you must use an algorithm called *binary search* or the *bisection method* to solve the problem correctly. This is our first attempt at programming a simple algorithm. This algorithm is used often in data analytics applications!
+
+\vspace{5mm}
+
+Please use the code cell below to write your solution:
+
+\vspace{5mm}
+
+```{python include=TRUE, eval=FALSE}
+def main():
+    # your code goes here!
+    print("Good luck!") # delete this line of code
+    
+if __name__ == "__main__":
+    main()
+```
+
+\newpage
+
+## Monte Carlo Simulation of Pi {-}
+
+_"Anyone who attempts to generate random numbers by deterministic means is, of course, living in a state of sin."_ -- John von Neumann
+
+\vspace{10mm}
+
+### Statement of the Problem {-}
+
+The _Monte Carlo Method_ is a computer simulation algorithm that works by using _pseudorandom number generators_ to mimic real-world randomness. The purpose of this exercise is to give you an opportunity to practice the Monte Carlo method in a simplified setting.
+
+Consider a square with sides of 1 unit and a unit circle contained within the square. It turns out that we can estimate the value of $\pi$ by simulating many points within the square and counting the proportion that fall within the circle to the total number of points (i.e. those within the square).
+
+Your task in this exercise is write a `Python` script that estimates the value of $\pi$ by Monte Carlo simulation. 
+
+Recall that the area of the circle is given by the following equation:
+
+$$
+A = \pi r^{2}
+$$
+
+Where $r$ is the radius of the circle, which in this case is $\frac{1}{2}$. Thus, the area of the unit cirlce is $\pi \left(\frac{1}{2}\right)^{2} = \frac{\pi}{4}$.
+
+Notice that in general the $\frac{\mbox{area of the cirlce}}{\mbox{area of the square}} \approx \frac{N_{c}}{N_{T}}$ where $N_{c}$ is the number of simulated points falling inside the circle and $N_{T}$ is the total number of simulated points.
+
+Then for the unit circle it will be true that:
+
+$$
+\pi \approx 4 \times \frac{N_{c}}{N_{T}}
+$$
+
+\vspace{5mm}
+
+Recall that for the equation for the unit circle is $x^{2} + y^{2} = 1$. Use this to classify a simulated $xy$-point as inside or outside the circle. ___Hint:___ simulate two standard uniform draws to form your $xy$-pairs.
+
+Monte Carlo relies upon a _law of large numbers_ argument where the approximation gets more accurate the more data points are simulated. Evaluate your program for repetitions of:
+
+```{python include=TRUE, eval=TRUE}
+n = [10**i for i in range(2, 8)]
+n
+```
+
+\vspace{5mm}
+
+Produce a table of the results.
+
+\vspace{5mm}
+
+### Some Interesting Historical Background {-}
+
+The great mathematician Stanislaw Ulam invented the Monte Carlo method while his friend and colleague, John von Neumann was building the ENIAC machine with his team of engineers. For an interesting discussion of the history of the episode see here: [The Monte Carlo Algorithm - George Dyson](https://www.youtube.com/watch?v=TtcB1MOlNiY&list=PLID29ec8IbbFEyZGNbRrgnWjYb_gZt_Lc).
+
+See the chapter _10. Monte Carlo_ in @Dyson2012 for a more in-depth accounting.
+
+\newpage
+
+## The Cherry Tootsie Rolls Problem {-}
+
+\vspace{10mm}
+
+There are 3 candy machines in front of you that each dispense either chocolate or cherry flavored Tootsie Rolls. Each has a different probability of dispensing chocolate versus cherry flavors. Your absolute favorite flavor is cherry. You can draw one Tootsie Roll at a time from a single candy machine. The dispensing probabilities remain constant over time. 
+
+- Outline a strategy to obtain as many cherry flavored Tootsie Rolls as possible for a fixed set of draws. 
+- This is a tough problem. Use computational and statistical thinking to come up with a strategy. Use your imagination. Be adventurous. 
+- ___Hint:___ Use Bayes's Rule! 
+
+\newpage
+
+
+## Monte Carlo Simulation of the St. Petersburg Paradox {-}
+
+\vspace{10mm}
+
+The _St. Petersburg Paradox_ is a very important paradox in economics and decision theory. It is named after the city where Daniel Bernoulli lived when he published the original paper on the subject. The paradoxical nature of the problem stems from the fact that a lottery is offered with infinite expected value but in practice few people are willing to pay more than $\$20$ for a chance to play the game. Thus the paradox. How can a lottery that has infinite value only be worth a relatively very small amount to most people?!
+
+The rules of the game are as follows: A coin is flipped until a head ($H$) occurs. If a $H$ appears on the $n$th flip, the player earns $\$2^{n}$. Of course, the game has an infinite number of outcomes (the coin might be flipped many many times and never come up $H$ though that is extremely unlikely), but it is easy to write down the first few possibilities:
+
+$$
+x_{1} = \$2, x_{2} = \$4, x_{3} = \$8, \ldots, x_{n} = \$2^{n}
+$$
+
+\vspace{10mm}
+
+This can be computed in `Python` as follows:
+
+\vspace{5mm}
+
+```{python include=TRUE}
+for i in range(1,8):
+    print(f"(i={i}, x=${2.0**i})")
+```
+
+\vspace{5mm}
+
+The probability of getting a $H$ for the first time on the $i$th flip is $\left(\frac{1}{2}\right)^{i}$; it is the probability of getting $(i - 1)$ tails ($T$) followed by a $H$. Hence the corresponding probabilities of the first few values are:
+
+$$
+p_{1} = \frac{1}{2}, p_{2} = \frac{1}{4}, p_{3} = \frac{1}{8}, \ldots, p_{n} = \frac{1}{2^{n}}
+$$
+
+\vspace{5mm}
+
+So the expected value of the lottery is given by the following:
+
+$$
+\begin{aligned}
+E(x) &= \sum\limits_{i=1}^{\infty} p_{i}x_{i} = \sum\limits_{i=1}^{\infty} 2^{i} (1/2^{i}) \\
+     & \\
+     &= 1 + 1 + 1 + \cdots + 1 + \cdots = \infty
+\end{aligned}
+$$
+
+\vspace{10mm}
+
+Your task is to conduct a Monte Carlo simulation of the game as follows:
+
+- You play a game against the dealer. 
+- The dealer puts $\$2$ into the pot. 
+- For each round of the game a fair coin is tossed.
+- If the coin comes up $T$ the dealer doubles the pot. 
+- If the coin comes up $H$ the game ends and you win the pot. 
+
+\vspace{10mm}
+
+What is your expected value for playing this game? How much would you be willing to pay to play this game? 
+
+Structure your solution to the game such that the player can parameterize the number of repetitions for the simulation as well the entry fee for playing the game. Calculate the average net earnings as well as median earnings across the number of repetitions. Print this output for each run to the console when the simulation is terminated.
+
+See _Chapter 7: Uncertainty_ in @Nicholson2012 for more details.
+
+
+

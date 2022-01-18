@@ -18,7 +18,7 @@ header-includes: |
     \pagestyle{empty}
 ---
 
-# Module 1: Decision Theory
+# Module 1: Probability & Statistics 
 
 ## Textbook Readings
 

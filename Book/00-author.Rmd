@@ -1,0 +1,7 @@
+# About the Author {-}
+
+Tyler J. Brough is an Associate Professor of Data Analytics & Information Systems in the Huntsman School of Business at Utah State University. He is also the Academic Director of the Analytics Solutions Center (ASC). Additionally, he is an Adjust Associate Professor of Economics & Finance.
+
+In 2010 he completed a Ph.D. in Finance at the University of Arizona. Before that he completed an undergraduate degree in Economics at Brigham Young University, as well as a masters degree in Finance at the University of Illinois at Urbana-Champaign.
+
+He has taught courses at USU in investments, corporate finance, econometrics, derviatives markets, computational finance, financial econometrics, and statistics. He currently teaches courses in machine learning and data analytics in the DAIS Department. 

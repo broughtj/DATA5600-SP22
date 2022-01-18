@@ -1,0 +1,6 @@
+book_filename: "data5600"
+output_dir: build
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
