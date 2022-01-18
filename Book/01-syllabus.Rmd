@@ -80,11 +80,12 @@ The grade that you will earn will be determined by the weighted total points acc
 
 * _Class Preparation & Participation (100%)_ - In a Socratic style seminar student preparation and participation is essential!
 
-* _Computational exercises (10%):_ There will be four main computational exercises to develop software architecture skills that are essential for the practicing data analyst.
-  - Chicken nuggest/coin problem
-  - Guess my number problem
-  - Monte Carlo simulation of pi problem
-  - Cherry tootsie rolls bandit problem
+* _Computational exercises (10%):_ There will be five main computational exercises to develop software architecture skills that are essential for the practicing data analyst.
+  1. Chicken nuggest/coin problem
+  2. Guess my number problem
+  3. Monte Carlo simulation of pi problem
+  4. Cherry tootsie rolls bandit problem
+  5. St. Petersburg paradox Monte Carlo simulation
 
 * _Preliminary exam (20%):_ A take-home preliminary exam covering the essentials of probability and mathematical statistics that are essential for regression analysis.
 

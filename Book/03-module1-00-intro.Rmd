@@ -1,0 +1,5 @@
+# Module 1: Probability & Statististics {-}
+
+The focus of this first module is to review the necessary elements of probability and mathematical statistics as a foundation for regression analysis. Probability theory is the foundation of decision making under conditions of uncertainty. Facility in probability and statistics is an essential skill for the practicing data analyst. 
+
+\pagebreak
