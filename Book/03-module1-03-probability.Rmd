@@ -1,0 +1,188 @@
+## Notes on Probability Theory {-}
+
+\vspace{8mm}
+
+### A Brief Review of Set Theory & Notation {-}
+
+We will use capital letters such as $A, B, C$ to denote sets of points. If the elements in a set are $a_{1}, a_{2}, a_{3}$ we will write
+
+\vspace{5mm}
+
+$$
+A = \{a_{1}, a_{2}, a_{3}\}
+$$
+
+\vspace{5mm}
+
+Let $S$ be the set of all elements under consideration, in other words $S$ is the universal set. 
+
+\vspace{5mm}
+
+Take two sets $A$ and $B$. $A$ is a subset of $B$, or $A$ is contained in $B$, denoted
+
+\vspace{5mm}
+
+$$
+A \subset B
+$$
+
+\vspace{5mm}
+
+if every element of $A$ is also in $B$.
+
+\vspace{5mm}
+
+The null set, or empty set, denoted by $\varnothing$, is the set containing no points. Thus $\varnothing$. Thus $\varnothing$ is a subset of every set. 
+
+\newpage
+
+We can visualize sets with Venn diagrams.
+
+\vspace{5mm}
+
+```{r venn-contains, fig.align = 'center', out.width = "80%", fig.cap = "A contained in B", echo=FALSE}
+knitr::include_graphics(here::here("Book/images", "venn_contains.png"))
+```
+
+\vspace{10mm}
+
+Consider now two arbitrary sets $A$ and $B$. The __union__ of $A$ and $B$, denoted
+
+\vspace{5mm}
+
+$$
+A \cup B
+$$
+
+\vspace{5mm}
+
+is the set of points in $A$ or $B$ or both. That is, the union of $A$ and $B$ contains all points in at least one of the sets. 
+
+\vspace{5mm}
+
+```{r venn-union, fig.align = 'center', out.width = "80%", fig.cap = "A union B", echo=FALSE}
+knitr::include_graphics(here::here("Book/images", "venn_union.png"))
+```
+
+The key word is "or" (meaning $A$ or $B$ or both)
+
+\pagebreak
+
+The __intersection__ of $A$ and $B$, denoted by
+
+\vspace{5mm}
+
+$$
+A \cap B
+$$
+
+\vspace{5mm}
+
+is the set of all points in both $A$ and $B$. 
+
+\vspace{5mm}
+
+```{r venn-intersect, fig.align = 'center', out.width = "80%", fig.cap = "A intersect B", echo=FALSE}
+knitr::include_graphics(here::here("Book/images", "venn_intersect.png"))
+```
+
+\vspace{5mm}
+
+
+\vspace{5mm}
+
+If $A$ is a subset of $S$, then the __complement__ of $A$, denoted b $\bar{A}$, is the set of all points that are in $S$, but not in $A$.
+
+\vspace{5mm}
+
+Venn diagram for $\bar{A}$
+
+\vspace{5mm}
+
+Note that $A \cup \bar{A} = S$
+
+\vspace{5mm}
+
+```{r venn-complement, fig.align = 'center', out.width = "80%", fig.cap = "A complement", echo=FALSE}
+knitr::include_graphics(here::here("Book/images", "venn_complement.png"))
+```
+
+\vspace{5mm}
+
+Two sets $A$ and $B$ are said to be mutually exclusive or __disjoint__ if $A \cap B = \varnothing$. That is, mutually exclusive set have no points in common. 
+
+\vspace{5mm}
+
+```{r venn-disjoint, fig.align = 'center', out.width = "80%", fig.cap = "A and B disjoint", echo=FALSE}
+knitr::include_graphics(here::here("Book/images", "venn_disjoint.png"))
+```
+
+\pagebreak
+
+Consider the example of tossing a coin.
+
+\vspace{5mm}
+
+* Let $S = \{1, 2, 3, 4, 5, 6\}$
+
+* Let $A = \{1, 2 \}$, $B = \{1, 3\}$, $C = \{2, 4, 6\}$
+
+\vspace{5mm}
+
+Then 
+
+* $A \cup B = \{1, 2, 3\}$
+
+* $A \cap B = \{1\}$
+
+* $\bar{A} = \{3, 4, 5, 6\}$
+
+* Note: $B$ and $C$ are disjoint but $A$ and $C$ are not
+
+\newpage
+
+Conditional probability in set Notation
+
+$$
+P(A | B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+\vspace{8mm}
+
+Note that
+
+$$
+P(B | A) = \frac{P(A \cap B)}{P(A)}
+$$
+
+\vspace{5mm}
+
+Thus
+
+$$
+\begin{aligned}
+P(A \cap B) &= P(B|A)P(A) \\
+& \\
+P(A \cap B) &= P(A|B)P(B) \\
+\end{aligned}
+$$
+
+\vspace{5mm}
+
+From this, it follows that
+
+$$
+\begin{aligned}
+P(A|B)P(B) &= P(B|A)P(A) \\
+& \\
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+\end{aligned}
+$$
+
+\vspace{5mm}
+
+This is __Bayes' Rule__!
+
+
+
+
