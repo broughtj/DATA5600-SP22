@@ -1,85 +1,30 @@
----
-title: "Elements of Probability: Discrete Probability" 
-author: Tyler J. Brough
-institute: Department of Finance and Economics 
-titlegraphic: ./images/vertical-logo-blue.png
-fontsize: 10pt
-output:
- beamer_presentation:
-    template: ./template.tex
-    keep_tex: false
-    toc: true
- ioslides_presentation:
-    smaller: true
----
+=-.5in
 
+**Elementary Probability Review**\
+**DATA 5600, Spring 2022**\
 
-# Basic Terminology
+This is a review of elementary probability that will be useful for our
+study of regression analysis. It is based on coverage Wooldridge (2004).
 
+Observational data sets econometrics apart from statistics. We will view
+an economic variable as an **outcome** from a **random process** not
+under the control of the researcher.
 
-## The Cast and Crew 
+The descriptive term for this underlying mechanism is the
+**data--generating process**, or **DGP**.
 
-* __Experiment:__ a repeatable procedure with well-defined possible outcomes
+We view the outcome variable $X$ as a random variable because until it
+is observed we are not certain about its value.
 
+An **experiment** is a procedure that can (at least in theory) be
+infinitely repeated and has a well--defined set of outcomes.
 
-* __Sample space:__ the set of all possible outcomes. This is often denoted by $\Omega$ or $S$.
-
-
-* __Event:__ a subset of the sample space
-
-
-* __Probability (mass) function (PMF):__ a function giving the probability for each outcomes
-
-
-## Later Concepts
-
-* __Probability density:__ a continuous distribution of probabilities
-
-
-* __Random variable:__ a random numerical outcome (an outcome about whose value we are a priori uncertain)
-
-
-## Simple Examples
-
-__Example 1: Tossing a Fair Coin__
-
-\vspace{5mm}
-
-* [Experiment](): toss the coin, report if it lands heads or tails
-
-* [Sample space](): $\Omega = \{H, T\}$
-
-* [PMF](): $P(H) = 0.5$ \quad and \quad $P(T) = 0.5$
-
-\vspace{8mm}
-
-__Example 2: Toss a Fair Coin 3 Times__
-
-\vspace{5mm}
-
-* [Experiment](): toss the coin 3 times, list the results.
-
-* [Sample space](): $\Omega = \{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}$
-
-* [PMF](): Each outcome is equally likely with probability $1/8$.
-
-
-## The PMF as a Table
-
-| Outcomes    | HHH | HHT | HTH | HTT | THH | THT | TTH | TTT |
-|:------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Probability | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 |
-
-
-# Discrete Random Variables
-
-
-## Random Variables
+An example: flip a coin $10$ time and count the number of heads. Each
+time the experiment is repeated the outcome will be an integer between
+$0$ and $10$.
 
 A **random variable** is a variable that takes on numerical values and
 has an outcome that is determined by an experiment.
-
-\vspace{5mm}
 
 An example:
 
@@ -96,51 +41,38 @@ An example:
 -   If they book too many they will have to compensate passengers for
     having to bump them.
 
-
-## Random Variables Continued
-
-* By convention, random variables are denoted by uppercase variables, such
+By convention, random variables are denoted by uppercase variables, such
 as $X$, $Y$, and $Z$.
 
-* The corresponding outcomes are denoted by lowercase letters $x$, $y$,
+The corresponding outcomes are denoted by lowercase letters $x$, $y$,
 $z$.
 
-* In the coin flipping example $X$ denotes the number of heads in $10$
+In the coin flipping example $X$ denotes the number of heads in $10$
 flips. We don't know ahead of time what value $X$ will take, but we know
 it will be in the set $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$. A
 particular outcome may be $x = 7$.
-
-
-## Binary Random Variables
 
 Random variables are defined to take on numerical values. So even in the
 coin flipping example, where the outcomes are \"heads\" and \"tails\",
 we code the outcomes as follows:
 
-- $X = 1$ for heads (success)
+-   $X = 1$ for heads (success)
 
-- $X = 0$ for tails (failure)
+-   $X = 0$ for tails (failure)
 
-
-## Discrete Random Variables 
+A random variable that only takes on values $0$ and $1$ is a
+**Bernoulli** (or **binary**) **random variable**.
 
 A discrete random variable is one that takes on only a finite (or
 countably infinite) number of values. A binary variable is the simplest
 case of a discrete random variable. The only quantity that we need to
 completely describe its behavior is the probability that $X = 1$.
 
-\vspace{5mm}
-
 In the coin flipping example (if the coin is \"fair\") then
 
-\vspace{5mm}
+-   $P(X = 1) = \frac{1}{2}$
 
-- $P(X = 1) = \frac{1}{2}$
-
-- $P(X = 0) = \frac{1}{2}$
-
-
-## The Airline Problem
+-   $P(X = 0) = \frac{1}{2}$
 
 Consider again the airline's problem of booking seats on a flight. We
 can analyze this with several binary variables. For a randomly selected
@@ -149,125 +81,74 @@ flight, and $X = 0$ otherwise. There is no reason to believe in this
 case that $P(X = 1) = \frac{1}{2}$, so we will define a *parameter*
 $\theta$ so that:
 
-\vspace{10mm}
+-   $P(X = 1) = \theta$
 
-- $P(X = 1) = \theta$
-
-- $P(X = 0) = 1 - \theta$
-
-
-# The Probability Mass Function
-
-
-## Probability, Estimation, and mathematical Statistics
+-   $P(X = 0) = 1 - \theta$
 
 For example, if $\theta = 0.75$, then there is a $75\%$ chance of the
 passenger showing up and $25\%$ chance of not showing up. In a
 real--life business situation the actual value of $\theta$ is crucial in
 determining the airline's strategy.
 
-\vspace{5mm}
-
 Methods for *estimating* $\theta$, given historical data on airline
 reservations is the subject of *mathematical statistics*.
-
-\vspace{5mm}
 
 Generally, a discrete random variable is completely described by listing
 the set of possible outcomes and the associated probability that it
 takes on each value.
 
-
-## Probability (Mass) Functions (PMF)
-
 If $X$ has $k$ possible values $\{x_{1}, x_{2}, \ldots, x_{k}\}$ then
 the probabilities $p_{1}, p_{2}, \ldots, p_{k}$ are defined by:
 
-\vspace{5mm}
+-   $p_{j} = P(X = x_{j})$, for $j = 1, 2, \ldots, k$
 
-- $p_{j} = P(X = x_{j})$, for $j = 1, 2, \ldots, k$
+-   $0 \leq p_{j} \leq 1$
 
-- $0 \leq p_{j} \leq 1$
+-   $\sum\limits_{j=1}^{k} p_{j} = 1$
 
-- $\sum\limits_{j=1}^{k} p_{j} = 1$
-
-
-## The PMF Continued 
-
-The **probability function** or (**PMF**) of $X$ summarizes the
+The **probability function** or (**PDF**) of $X$ summarizes the
 information concerning the possible outcomes of $X$ and the
 corresponding probabilities:
 
-\vspace{5mm}
-
-$$
-f(x_{j}) = p_{j}, \quad \mbox{$j = 1, 2, \ldots, k$}
-$$
-
-\vspace{5mm}
+$$f(x_{j}) = p_{j}, \quad \mbox{$j = 1, 2, \ldots, k$}$$
 
 For any real number $x$, $f(x)$ is the probability that the random
 variable $X$ takes on the particular value $x$.
 
-
-## An Example
-
-Suppose that $X$ is the number of free throws made by Larry
+An example: Suppose that $X$ is the number of free throws made by Larry
 Bird out of two attempts. $X$ can take on the three values
 $\{0, 1, 2\}$. Assume the PDF of $X$ is given by
 
-\vspace{10mm}
+-   $f(0) = 0.20$
 
-- $f(0) = 0.20$
+-   $f(1) = 0.44$
 
-- $f(1) = 0.44$
-
-- $f(2) = 0.36$
-
-
-## Larry Bird Continued
+-   $f(2) = 0.36$
 
 We can calculate the probability that Larry Bird will make at least one
 free throw:
 
-\vspace{5mm}
-
-$$
-\begin{aligned}
+$$\begin{aligned}
 P(X \geq 1) &= P(X = 1) + P(X = 2) \\
             &= 0.44 + 0.36 \\
-            &= 0.80
-\end{aligned}
-$$
+            &= 0.80 \end{aligned}$$
 
-
-## Graphing the PMF
+We can graph this discrete PDF as follows:
 
 ![The Probability Density Function of Larry Bird Free
 Throws](images/Larry.jpeg){width="3in"}
 
-# Additional Topics
-
-## 
-
 When dealing with more than two random variables we subscript the PDF's
 as follows:
 
-\vspace{5mm}
+-   $f_{x}$ is the PDF of $X$
 
-- $f_{x}$ is the PDF of $X$
-
-- $f_{y}$ is the PDF of $Y$
-
-
-## Continuous Random Variables 
+-   $f_{y}$ is the PDF of $Y$
 
 A variable $X$ is a **continuous random variable** if it takes on any
 real value with *zero* probability. A continuous random variable $X$ can
 take on so many possible values that they are not countable, so logical
 consistency requires that each one has probability zero.
-
-\vspace{3mm}
 
 Examples:
 
