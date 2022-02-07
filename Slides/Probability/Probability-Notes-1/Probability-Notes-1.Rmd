@@ -1,0 +1,81 @@
+---
+title: "Elements of Probability: Discrete Probability" 
+author: Tyler J. Brough
+institute: Department of Finance and Economics 
+titlegraphic: ./images/vertical-logo-blue.png
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ./template.tex
+    keep_tex: false
+    toc: true
+ ioslides_presentation:
+    smaller: true
+---
+
+
+# Basic Terminology
+
+
+## The Cast and Crew 
+
+* __Experiment:__ a repeatable procedure with well-defined possible outcomes
+
+
+* __Sample space:__ the set of all possible outcomes. This is often denoted by $\Omega$ or $S$.
+
+
+* __Event:__ a subset of the sample space
+
+
+* __Probability (mass) function (PMF):__ a function giving the probability for each outcomes
+
+
+## Later Concepts
+
+* __Probability density:__ a continuous distribution of probabilities
+
+
+* __Random variable:__ a random numerical outcome (an outcome about whose value we are a priori uncertain)
+
+
+## Simple Examples
+
+__Example 1: Tossing a Fair Coin__
+
+\vspace{5mm}
+
+* [Experiment](): toss the coin, report if it lands heads or tails
+
+* [Sample space](): $\Omega = \{H, T\}$
+
+* [PMF](): $P(H) = 0.5$ \quad and \quad $P(T) = 0.5$
+
+\vspace{8mm}
+
+__Example 2: Toss a Fair Coin 3 Times__
+
+\vspace{5mm}
+
+* [Experiment](): toss the coin 3 times, list the results.
+
+* [Sample space](): $\Omega = \{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}$
+
+* [PMF](): Each outcome is equally likely with probability $1/8$.
+
+
+## The PMF as a Table
+
+| Outcomes    | HHH | HHT | HTH | HTT | THH | THT | TTH | TTT |
+|:------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Probability | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 | 1/8 |
+
+
+## 
+
+
+
+
+
+
+
