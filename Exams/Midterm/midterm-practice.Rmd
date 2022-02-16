@@ -1,0 +1,64 @@
+---
+title: "Practice Midterm Exam: Probability"
+author: "Tyler J. Brough"
+date: "2/14/2022"
+output: pdf_document
+---
+
+## Practice Problems
+
+__1.__ Consider rolls of a four-sided die. A bet is placed that a 1 will occur on a single roll of the die.
+       Thus, $E = \{1\}$, $E^{\prime} = \{2, 3, 4\}$, and $\theta = \frac{1}{4}$. 
+
+
+\vspace{10mm}
+
+
+__2.__ A student answers 20 true-false questions at random. What is the probability of getting $100\%$ on the test? What is
+the probability of getting $80\%$ on the test? 
+
+
+\vspace{10mm}
+
+
+__3.__ A box contains 10 purple marbles and 20 orange marbles, and five marbles are selected with replacement. What is the probability
+of getting exactly 2 purple marbles?
+
+
+\vspace{10mm}
+
+
+__4.__ Research has shown that 4 out of 10 5th graders in Utah can locate the state of Colorado on a map. What is the probability that
+you will have to sample 5 students before one can locate Colorado on the map? 
+
+\vspace{10mm}
+
+__5.__ The probability a certain baseball player gets a hit is 0.3, and we assume that times at bat are independent. What is the probability
+that he will require 5 times at bat before he gets a hit? 
+
+\vspace{10mm}
+
+__6.__ Team A plays team B in a seven-game world series. That is, the series is over when either team wins four games. For each game, 
+$P(A wins) = 0.6$, and the games are assumed independent. What is the probability that the series will end in exactly six games? 
+
+\vspace{10mm}
+
+__7.__ A child is responsible for selling candy bars to raise money for a school field trip. There are 30 houses in the neighborhood and 
+the child is told to not come home until 5 candy bars are sold. Let's say that there is a $0.6$ probability of selling a candy bar at 
+each house and that they are independent. What is the probability that the child has to visit each house in the neighborhood? 
+
+\vspace{10mm}
+
+__8.__ The number of industrial accidents at a particular manufacturing plant is found to average 3 per month. During the last month 6
+accidents occurred. Does this number seem highly improbable if $\mu$ is still equal to 3? Does it indicate an increase in the mean $\mu$?
+
+\vspace{10mm}
+
+__9.__ The number of typing errors made by a particular typist has a Poisson distribution with an average of 4 errors per page. If more than
+four errors appear on a given page, the typist must retype the whole page. What is the probability that a certain page does not have to be 
+retyped?
+
+\vspace{10mm}
+
+__10.__ The number of knots in a particular type of wood has a Poisson distribution with an average of 1.5 knots in 10 cubic feet of the 
+wood. Find the probability that a 10-cubic-foot block of wood has a most one knot? 

@@ -117,6 +117,8 @@ Random variables are defined to take on numerical values. So even in the
 coin flipping example, where the outcomes are \"heads\" and \"tails\",
 we code the outcomes as follows:
 
+\vspace{5mm}
+
 - $X = 1$ for heads (success)
 
 - $X = 0$ for tails (failure)

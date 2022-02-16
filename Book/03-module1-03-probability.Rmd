@@ -1,4 +1,4 @@
-## Notes on Probability Theory {-}
+## Elements of Probability {-}
 
 \vspace{8mm}
 
@@ -182,6 +182,9 @@ $$
 \vspace{5mm}
 
 This is __Bayes' Rule__!
+
+
+\newpage
 
 
 
