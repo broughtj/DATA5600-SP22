@@ -1,0 +1,28 @@
+---
+title: "Elements of Probability Notebook"
+date: February 28, 2022
+output: pdf_document
+---
+
+
+## Introduction
+
+The purpose of this exercise is to help (force) you to learn how to write a well-structured Jupyter Notebook
+with markdown and \LaTeX. 
+
+\vspace{5mm}
+
+### The Source
+
+You will summarize the document "Appendix A: Probability" from the textbook _Introduction to Machine Learning_
+by Ethem Alpaydin. This will be distributed via Canvas. 
+
+\vspace{5mm}
+
+This assignment has the following goals: 
+
+1. Provide an opportunity for you to learn how to write complex documents in the Jupyter notebook environment.
+   This is important because all of your assignments will be written in this format for the remainder of the
+   semester. 
+
+2. It will help you review the material on probability theory in a succinct manner. 
