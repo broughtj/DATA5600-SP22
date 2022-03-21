@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Agenda for 03/21/2022}{2}{0}{1}
+\beamer@sectionintoc {2}{Brief Review of Some Concepts}{3}{0}{2}
+\beamer@sectionintoc {3}{Mathematical Statistics}{8}{0}{3}
+\beamer@sectionintoc {4}{Confidence Intervals}{19}{0}{4}
