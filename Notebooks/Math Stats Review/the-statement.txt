@@ -1,0 +1,5 @@
+Monte Carlo simulation allows us to operationalize the repeated sampling thought experiment 
+that is embedded in the Central Limit Theorem
+
+- Operationalizing this allows us to actually see directly what is going on implicitly
+  in the CLT
