@@ -1,0 +1,52 @@
+---
+title: "The Simple Regression Model" 
+author: Tyler J. Brough
+institute: Department of Finance and Economics 
+titlegraphic: ./images/vertical-logo-blue.png
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: ./template.tex
+    keep_tex: false
+    toc: true
+ ioslides_presentation:
+    smaller: true
+---
+
+
+# Section 2.1: The Definition of the Simple Regression Model
+
+## The Simple Regression Model
+
+- Most of econometrics deals with relating two random variables $Y$ and $X$ that represent some population model
+
+- Usually, we are interested in ___"explaining $Y$ in terms of $X$."___
+
+- We confront (at least) 3 issues in "explaining $Y$ in terms of $X$":
+	1. Since there is never an exact relationship between two variables, how do we allow for other factors to affect $Y$?
+	2. What is the functional relationship between $Y$ and $X$? ($y = f(x)$?)
+    3. How can we be sure we are capturing a ceteris paribus relationship between $Y$ and $X$?
+
+
+## 
+
+- We start by writing down an equation relating $Y$ to $X$ as follows:
+
+\vspace{2.5mm}
+
+$$
+{\large Y = \beta_{0} + \beta_{1} X + u}
+$$
+
+\vspace{2.5mm}
+
+- This equation is assumed to hold for the population of interest. It is called the \underline{\textbf{Simple Regression Model}}
+
+\vspace{3mm}
+
+- In this model:
+	* $Y =$ explained variable (the variable we are interested in explaining)
+	* $X =$ explanatory variable (the variable we believe affects $Y$)
+	* $U =$ error or disturbance term (represents other factors affecting $Y$)
+
+
